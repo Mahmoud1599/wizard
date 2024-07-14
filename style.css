@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:700);
+
+body {
+  background: url(http://farm5.staticflickr.com/4139/4825532997_7a7cd3d640_b.jpg);
+  background-size: cover;
+  height: 100%;
+  font-family: "Merriweather Sans", sans-serif;
+  color: #666;
+}
+
+#test {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  margin: 80px auto;
+  position: relative;
+  min-height: 300px;
+}
+
+#fieldsets {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#fieldsets .valid-erorr {
+  color: #bf2424;
+  display: block;
+  margin-top: 0;
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+#fieldsets .hidden {
+  display: none;
+}
+input[type="text"],
+textarea {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-bottom: 8px;
+  position: relative;
+}
+#fieldsets input.error,
+textarea.error {
+  border-color: #bf2424;
+}
+
+input.text:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border: 1px solid #22918b;
+}
+
+input[type="radio"] {
+  margin: 6px;
+  display: inline-block;
+}
+
+fieldset {
+  border: none;
+  position: absolute;
+  left: -100%;
+  width: 90%;
+  padding: 10px 5%;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+fieldset.current {
+  left: 0;
+  opacity: 1;
+}
+
+fieldset.next {
+  left: 100%;
+}
+
+fieldset.previous {
+  left: -100%;
+}
+
+input[type="submit"] {
+  display: none;
+  border: none;
+}
+
+#clubs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.clubs_label {
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+#clubs .club_item input {
+  display: none;
+}
+
+#clubs .club_img {
+  width: 100%;
+  max-width: 175px;
+  height: auto;
+  border-radius: 2px;
+  margin: 0;
+}
+
+#clubs .club_item:has(input:checked) {
+  border: 4px solid #22918b;
+}
+
+#section-tabs {
+  font-size: 0.8em;
+  height: 50px;
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  padding: 0;
+  font-weight: bold;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+#section-tabs li {
+  color: #a7a7a7;
+  cursor: not-allowed;
+  border-left: 1px solid #aaa;
+  text-decoration: none;
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  background: #ddd;
+  position: relative;
+}
+
+#section-tabs li span {
+  color: #bababa;
+}
+
+#section-tabs li:after {
+  content: "";
+  display: block;
+  margin-left: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#section-tabs li.current {
+  opacity: 1;
+  background: #fff;
+  z-index: 999;
+  border-left: none;
+  color: #444;
+  cursor: pointer;
+}
+
+#section-tabs li.previous {
+  cursor: pointer;
+}
+
+#section-tabs li.current:after {
+  border: 15px solid transparent;
+  border-left: 15px solid #2cbab2;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.survey input[type="range"] {
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.survey p {
+  margin-bottom: 0;
+}
+
+.survey ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.final_word {
+  text-align: center;
+  margin: 100px 0;
+  font-weight: bold;
+}
+
+.btn {
+  width: auto;
+  border: none;
+  padding: 8px;
+  background: #2cbab2;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.btn:hover {
+  background: #26a19a;
+}
+
+.btn.hidden {
+  display: none;
+}
+.result-btn {
+  position: absolute;
+  bottom: -50px;
+  left: 50px;
+  text-decoration: none;
+  color: #fff;
+  width: fit-content;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  #test {
+    width: 95%;
+    padding: 10px;
+    margin: 40px auto;
+  }
+
+  #clubs .club_img {
+    width: 120px;
+    height: auto;
+  }
+
+  .survey {
+    width: 100%;
+  }
+
+  .survey input[type="range"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-tabs {
+    font-size: 0.7em;
+  }
+
+  #section-tabs li {
+    padding: 0 4px;
+    font-size: 0.9em;
+  }
+
+  .btn {
+    bottom: 10px;
+    right: 10px;
+    padding: 6px;
+  }
+
+  .survey {
+    width: 100%;
+  }
+
+  .survey input[type="range"] {
+    width: 100%;
+  }
+}

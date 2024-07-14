@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:700);
+
+body {
+  background: url(http://farm5.staticflickr.com/4139/4825532997_7a7cd3d640_b.jpg);
+  background-size: cover;
+  height: 100%;
+  font-family: "Merriweather Sans", sans-serif;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+#club-filter,
+#search {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+#club-filter:focus,
+#search:focus {
+  outline: none;
+  border: 1px solid #22918b;
+}
+
+#data-table {
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+#data-table th,
+#data-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#data-table th {
+  background: #22918b;
+  color: #fff;
+}
+
+#data-table td {
+  white-space: pre-wrap; /* Allow text wrapping within cells */
+}
+
+#data-table tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+#data-table tr:hover {
+  background: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+.btn {
+  width: fit-content;
+  border: none;
+  padding: 8px;
+  background: #2cbab2;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+  position: absolute;
+  top: 50px;
+  font-family: "Merriweather Sans", sans-serif;
+  text-decoration: none;
+}
+.visual-btn {
+  right: 150px;
+}
+.form-btn {
+  left: 150px;
+}
+.btn:hover {
+  background: #26a19a;
+}

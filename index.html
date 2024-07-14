@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="test">
+      <ul id="section-tabs">
+        <li class="current active">step<span>.1</span></li>
+        <li>step<span>.2</span></li>
+        <li>step<span>.3</span></li>
+        <li>step<span>.4</span></li>
+      </ul>
+      <div id="fieldsets">
+        <fieldset class="current">
+          <label for="title">Your Name:</label>
+          <input name="title" type="text" class="required text" />
+          <p class="valid-erorr hidden">*this field is required</p>
+          <label name="description" for="description"
+            >Your football best memory:</label
+          >
+          <textarea
+            type="text"
+            class="required text"
+            name="description"
+            id="description"
+          ></textarea>
+          <p class="valid-erorr hidden">*this field is required</p>
+        </fieldset>
+
+        <fieldset class="next">
+          <p class="clubs_label">Vote for the Best.</p>
+          <ul id="clubs">
+            <li class="club_item">
+              <label for="club-1">
+                <img class="club_img" src="./image/images (6).png" alt="" />
+              </label>
+              <input
+                type="radio"
+                name="club"
+                value="Liverpool"
+                id="club-1"
+                class="required"
+              />
+            </li>
+            <li class="club_item">
+              <label for="club-2">
+                <img
+                  class="club_img"
+                  src="./image/football-logo-manchester-united.webp"
+                  alt=""
+                />
+              </label>
+              <input
+                type="radio"
+                name="club"
+                value="ManUnited"
+                id="club-2"
+                class="required"
+              />
+            </li>
+            <li class="club_item">
+              <label for="club-3">
+                <img
+                  class="club_img"
+                  src="./image/football-logo-real-madrid.webp"
+                  alt=""
+                />
+              </label>
+              <input
+                type="radio"
+                name="club"
+                value="RealMadrid"
+                id="club-3"
+                class="required"
+              />
+            </li>
+            <li class="club_item">
+              <label for="club-4">
+                <img class="club_img" src="./image/images (2).png" alt="" />
+              </label>
+              <input
+                type="radio"
+                name="club"
+                value="Arsenal"
+                id="club-4"
+                class="required"
+              />
+            </li>
+            <li class="club_item">
+              <label for="club-5">
+                <img class="club_img" src="./image/images.png" alt="" />
+              </label>
+              <input
+                type="radio"
+                name="club"
+                value="Barcelona"
+                id="club-5"
+                class="required"
+              />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="next">
+          <div class="survey">
+            <label for="opinion">how far are you loyal to your club </label>
+            <input
+              type="range"
+              step="10"
+              name="range"
+              value="10"
+              class="required"
+            />
+            <p>choose only one thing</p>
+            <ul>
+              <li>
+                <input
+                  type="checkbox"
+                  name="language"
+                  value="Goal at the +90"
+                  id="HTML"
+                  class="required"
+                />
+                <label for="HTML">Goal at the +90</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="language"
+                  value="Winning the Derby"
+                  id="CSS"
+                  class="required"
+                />
+                <label for="CSS">Winning the Derby</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="language"
+                  value="Winnig a Champion"
+                  id="JS"
+                  class="required"
+                />
+                <label for="JS">Winnig a Champion </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="next">
+          <p class="final_word">Thanks for applying</p>
+        </fieldset>
+
+        <button type="button" class="btn" id="next">Next Section ▷</button>
+        <button type="submit" class="btn hidden" id="submit">Submit</button>
+      </div>
+
+      <a
+        class="btn result-btn hidden"
+        href="./data page/data.html"
+        target="_blank"
+        >Check Results</a
+      >
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+body {
+  background: url(http://farm5.staticflickr.com/4139/4825532997_7a7cd3d640_b.jpg);
+  background-size: cover;
+  height: 100%;
+  font-family: "Merriweather Sans", sans-serif;
+  color: aliceblue;
+}
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#charts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: aliceblue;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* .choice_label {
+  z-index: 1;
+  font-size: 14px;
+  color: black;
+} */
+
+.gauge-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+  padding: 50px;
+}
+
+.gauge {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+text {
+  font-family: Arial, sans-serif;
+}

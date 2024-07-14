@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="filter-container">
+      <select id="club-filter">
+        <option value="all">All Clubs</option>
+        <option value="Liverpool">Liverpool</option>
+        <option value="ManUnited">ManUnited</option>
+        <option value="RealMadrid">RealMadrid</option>
+        <option value="Arsenal">Arsenal</option>
+        <option value="Barcelona">Bercelona</option>
+      </select>
+      <input type="text" id="search" placeholder="Search by name" />
+    </div>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th id="club-header">Club</th>
+          <th>Loyalty</th>
+          <th>Choice</th>
+          <th>Memory</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <a
+      class="btn visual-btn"
+      href="../data visualization/visual.html"
+      target="_blank"
+      >Go to statistics</a
+    >
+    <a class="btn form-btn" href="../index.html" target="_blank">Go to form </a>
+    <script src="./data.js"></script>
+  </body>
+</html>
